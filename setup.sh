@@ -55,7 +55,7 @@ set postponed = \"+[Gmail]/Drafts\"
 
 mailboxes =Inbox =\"[Gmail]/Sent Mail\" =[Gmail]/Important =[Gmail]/Starred =[Gmail]/Drafts =[Gmail]/Spam =Trash
 
-source x1nigo.mutt
+source colors.mutt
 
 set sidebar_visible=yes
 set sidebar_format="%B%?F? [%F]?%* %?N?%N/?%S"
