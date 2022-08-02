@@ -104,7 +104,7 @@ arrangestuff {
 	sudo cp mx /usr/bin/ &&
 
 	mkdir $HOME/.config/mutt
-	cp muttrc $muttdir && cp x1nigo.mutt $muttdir &&
+	cp muttrc $muttdir && cp colors.mutt $muttdir &&
 	cp .mbsyncrc $HOME/
 }
 
