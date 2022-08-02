@@ -18,7 +18,7 @@ mx [ OPTION ]
 - neomutt
 - isync
 - pass
-- a gpg key (and you know your gpg id)
+- a gpg key
 
 ## Get started
 ```
