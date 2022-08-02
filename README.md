@@ -3,8 +3,8 @@ A script meant to set up an email client with neomutt. As of now, this only work
 around to making this more extensible yet.
 
 By the way, if you are prompted for your gmail password, don't put your actual one &ndash; you need to enable `two-factor
-authentication` and get an `app-password`. Use that one for the password prompt. Don't worry, your password will be
-encrypted by the end of the script.
+authentication` and get an `app-password`. Use that one for the password prompt and it will be encrypted by the end of
+the script.
 
 ## Syntax
 ```
