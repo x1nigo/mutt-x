@@ -1,4 +1,4 @@
-# mutt-x1nigo
+# Neo
 A script meant to set up an email client with neomutt. As of now, this only works with gmail &ndash; I haven't gotten
 around to making this more extensible yet.
 
@@ -8,11 +8,11 @@ the script.
 
 ## Syntax
 ```
-mx [ OPTION ]
+neo [ OPTION ]
 ```
 ## Options
 - `-s` or `--sync` &ndash;&ndash; Sync mail and download it to your mail directory for offline use.
-- `none` &ndash;&ndash; With no option, `mx` will just open up the mail client.
+- `none` &ndash;&ndash; With no option, `neo` will just open up the mail client.
 
 ## Dependencies
 - neomutt
@@ -22,8 +22,8 @@ mx [ OPTION ]
 
 ## Get started
 ```
-git clone https://github.com/x1nigo/mutt-x1nigo.git
-cd mutt-x1nigo
+git clone https://github.com/x1nigo/neo.git
+cd neo
 sh setup.sh
 ```
 
