@@ -11,6 +11,7 @@ mx [ OPTION ]
 
 ## Dependencies
 - neomutt
+- isync
 - pass
 - a gpg key (and you know your gpg id)
 
