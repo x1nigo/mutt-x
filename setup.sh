@@ -41,7 +41,7 @@ muttinstall() {
 	sleep 1
 
 	echo "set imap_user = \"$email\"
-set smtp_pass = "`pass show $email`"
+set smtp_pass = \"\`pass show $email\`\"
 set folder = \"~/.mail/gmail/\"
 set smtp_url = \"smtp://$email@smtp.gmail.com:587/\"
 set from = \"$email\"
@@ -79,7 +79,7 @@ isyncinstall() {
 	echo "IMAPAccount gmail
 Host imap.gmail.com
 User $email
-PassCmd "pass show $email"
+PassCmd \"pass show $email\"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
