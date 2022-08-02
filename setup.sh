@@ -101,8 +101,8 @@ SyncState *" > .mbsyncrc
 }
 
 arrangestuff() {
-	chmod +x mx &&
-	sudo cp mx /usr/bin/ &&
+	chmod +x neo &&
+	sudo cp neo /usr/bin/ &&
 
 	mkdir $muttdir &&
 	cp muttrc $muttdir && cp colors.mutt $muttdir &&
@@ -132,7 +132,7 @@ arrangestuff || error "An error occurred in moving respective files."
 # Closing message
 printf "============================================================================\n"
 printf "Congratulations! You have successfully set up a terminal-based email client.\n"
-printf "Make sure to run mx --sync first before launching the client so you actually\n"
+printf "Make sure to run neo --sync first before launching the client so you actually\n"
 printf "have some mail to browse through!\n"
 printf "— X1nigo\n"
 printf "============================================================================\n"
