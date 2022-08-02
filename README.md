@@ -1,5 +1,9 @@
 # mutt-x1nigo
-A script meant to set up an email client with neomutt. WARNING, still in testing phase. Don't use yet.
+A script meant to set up an email client with neomutt. As of now, this only works with gmail &ndash; I haven't gotten
+around to making this more extensible yet.
+
+By the way, if you are prompted for your gmail password, don't put your actual one &ndash; you need to enable `two-factor
+authentication` and get an `app-password`. Use that one for the password prompt.
 
 ## Syntax
 ```
