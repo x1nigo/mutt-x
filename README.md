@@ -23,7 +23,7 @@ sh setup.sh
 ```
 
 ## Getting a gpg key
-Before doing anything else, make sure that there is a `XDG_CONFIG_HOME/gnupg/` directory.
+Before doing anything else, make sure that there is a `$XDG_CONFIG_HOME/gnupg/` directory.
 ```
 gpg --full-gen-key
 ```
