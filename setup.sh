@@ -9,12 +9,12 @@ muttdir="$HOME/.config/mutt/"
 
 ## Functions
 
-error {
+error() {
 	printf "%s\n" "$1"
 	exit
 }
 
-entermail {
+entermail() {
 	printf "Enter your email address:\n"
 	read email
 
@@ -24,7 +24,7 @@ entermail {
 	fi
 }
 
-setuppass {
+setuppass() {
 	printf "Enter your gpg ID:\n"
 	read gpgid
 
@@ -32,11 +32,11 @@ setuppass {
 	pass add $email
 }
 
-maildir {
+maildir() {
 	mkdir -p $HOME/.mail/gmail/
 }
 
-muttinstall {
+muttinstall() {
 	printf "Setting up muttrc file...\n"
 	sleep 1
 
@@ -72,7 +72,7 @@ bind index,pager   h exit
 bind index         l display-message" > muttrc
 }
 
-isyncinstall {
+isyncinstall() {
 	printf "Setting up mbsyncrc file...\n"
 	sleep 1
 
@@ -100,7 +100,7 @@ Expunge Both
 SyncState *" > .mbsyncrc
 }
 
-arrangestuff {
+arrangestuff() {
 	sudo cp mx /usr/bin/ &&
 
 	mkdir $HOME/.config/mutt
