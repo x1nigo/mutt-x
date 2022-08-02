@@ -7,6 +7,7 @@
 
 muttdir="$HOME/.config/mutt/"
 
+
 ## Functions
 
 error() {
