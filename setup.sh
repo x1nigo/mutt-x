@@ -101,6 +101,7 @@ SyncState *" > .mbsyncrc
 }
 
 arrangestuff() {
+	chmod +x mx &&
 	sudo cp mx /usr/bin/ &&
 
 	mkdir $HOME/.config/mutt
@@ -132,13 +133,3 @@ arrangestuff || error "An error occurred in moving respective files."
 printf "============================================================================\n"
 printf "Congratulations! You have successfully set up a terminal-based email client.\n"
 printf "============================================================================\n"
-printf "\n"
-printf "Some commands you should know:\n"
-printf "------------------------------\n"
-printf "Syntax => \`mx\` to bring up mutt-x1nigo"
-printf "          \`mx -s\` to sync mail and store on your machine"
-printf "          can also be \`--sync\` instead of -s"
-printf "------------------------------\n"
-printf "\n"
-printf "Have fun!"
-printf "\n"
