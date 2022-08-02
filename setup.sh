@@ -58,7 +58,7 @@ mailboxes =Inbox =\"[Gmail]/Sent Mail\" =[Gmail]/Important =[Gmail]/Starred =[Gm
 source colors.mutt
 
 set sidebar_visible=yes
-set sidebar_format="%B%?F? [%F]?%* %?N?%N/?%S"
+set sidebar_format=\"%B%?F? [%F]?%* %?N?%N/?%S\"
 set sidebar_width=25
 set sidebar_short_path=yes
 set sidebar_delim_chars='/.'
