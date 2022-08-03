@@ -51,22 +51,78 @@ set postponed = \"+[Gmail]/Drafts\"
 
 mailboxes =Inbox =\"[Gmail]/Sent Mail\" =[Gmail]/Important =[Gmail]/Starred =[Gmail]/Drafts =[Gmail]/Spam =Trash
 
-source colors.mutt
-
 set sidebar_visible=yes
 set sidebar_format=\"%B%?F? [%F]?%* %?N?%N/?%S\"
-set sidebar_width=25
+set sidebar_width=20
 set sidebar_short_path=yes
 set sidebar_delim_chars='/.'
 set mail_check_stats
 set editor=vim
+set index_format = \"%4C %Z %{!%d %b %Y} %-20.20Fp %s %c\"
+
+set sort = reverse-date-received
 
 bind index,pager \Ck sidebar-prev
 bind index,pager \Cj sidebar-next
 bind index,pager \Co sidebar-open
 bind index,pager \Cb sidebar-toggle-visible
-bind index,pager   h exit
-bind index         l display-message" > muttrc
+bind index,pager,attach h exit
+bind index l display-message
+bind pager l view-attachments
+bind attach l view-attach
+
+## Basics
+color normal white default
+color indicator brightblack white
+color tree yellow default
+color status brightwhite black
+color error red default
+color message color253 default
+color signature brightred default
+color attachment cyan default
+color search color100 default
+color tilde color130 default
+color markers color138 default
+color hdrdefault brightblue default
+
+color quoted red default
+color quoted1 red default
+color quoted2 red default
+color quoted3 red default
+color quoted4 red default
+color quoted5 red default
+color quoted6 red default
+color quoted7 red default
+color quoted8 red default
+color quoted9 red default
+
+## Index
+color index brightdefault black '(~N|~O)'
+color index_author brightred default '.*'
+color index_date brightyellow default
+color index_number brightblue default
+color index_subject brightblue default '.*'
+color index_size brightcyan default
+color index_flags brightcyan default '.*'
+
+## Pager
+color header brightblue default '^date:'
+color header brightblue default '^(to|cc|bcc):'
+color header brightblue default '^from:'
+color header brightblue default '^subject:'
+color header brightblue default '^user-agent:'
+color header brightblue default '^reply-to:'
+color header brightblue default '^x-mailer:'
+color body white default '.*'
+color body brightred default '((fttp|http|https)://|news:)[^ >)\"\t]+'
+
+## Sidebar
+color sidebar_divider black black
+color sidebar_highlight brightwhite black
+color sidebar_indicator brightblack white
+color sidebar_new brightgreen default
+color sidebar_ordinary white default
+color sidebar_unread brightcyan default" > muttrc
 }
 
 isyncinstall() {
@@ -98,11 +154,8 @@ SyncState *" > .mbsyncrc
 }
 
 arrangestuff() {
-	chmod +x neo &&
-	sudo cp neo /usr/bin/ &&
-
 	mkdir $muttdir &&
-	cp muttrc $muttdir && cp colors.mutt $muttdir &&
+	cp muttrc $muttdir &&
 	cp .mbsyncrc $HOME/
 }
 
@@ -134,9 +187,9 @@ arrangestuff || error "An error occurred in moving respective files."
 getpermission || error "Error setting up permissions for gnupg directory."
 
 # Closing message
-printf "============================================================================\n"
+printf "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n"
 printf "Congratulations! You have successfully set up a terminal-based email client.\n"
-printf "Make sure to run neo --sync first before launching the client so you actually\n"
+printf "Make sure to run mbsync -a first before launching the client so you actually\n"
 printf "have some mail to browse through!\n"
-printf "— X1nigo\n"
-printf "============================================================================\n"
+printf "— x1nigo\n"
+printf "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n"
