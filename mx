@@ -2,7 +2,6 @@
 
 option="$1"
 maildir="$HOME/.mail/gmail"
-newmail=$(ls "$maildir"/Inbox/new | wc -l)
 plshelp() {
         echo "
 mutt-x — deploys x1nigo's configuration file(s) for neomutt as an email client.
@@ -18,6 +17,9 @@ Options:
 
 if [[ $option == "-s" || $option == "--sync" ]]; then
         mbsync -a 2>/dev/null &&
+        
+        newmail=$(ls "$maildir"/Inbox/new | wc -l)
+        
         if [[ $newmail -gt 0 ]]; then
                 notify-send -t 5000 "You have ($newmail) new mail!"
         fi
