@@ -189,7 +189,7 @@ getpermission || error "Error setting up permissions for gnupg directory."
 # Closing message
 printf "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n"
 printf "Congratulations! You have successfully set up a terminal-based email client.\n"
-printf "Make sure to run mbsync -a first before launching the client so you actually\n"
+printf "Make sure to run mx -s first before launching the client so you actually\n"
 printf "have some mail to browse through!\n"
 printf "— x1nigo\n"
 printf "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n"
