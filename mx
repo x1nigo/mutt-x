@@ -1,6 +1,8 @@
 #! /bin/sh
 
 option="$1"
+maildir="$HOME/.mail/gmail"
+newmail=$(ls "$maildir"/Inbox/new | wc -l)
 plshelp="
 Mutt-X — deploys x1nigo's configuration file(s) for neomutt as an email client.
 Usage:
@@ -12,7 +14,10 @@ Options:
 	-h --help	Displays this help text."
 
 if [[ $option == "-s" || $option == "--sync" ]]; then
-	mbsync -a 2>/dev/null
+	mbsync -a 2>/dev/null &&
+	if [[ $newmail -gt 0 ]]; then
+		notify-send -t 5000 "You have ($newmail) new mail!"
+	fi
 elif [[ $option == "-h" || $option == "--help" ]]; then
 	echo $plshelp 2>/dev/null
 elif [[ $option == "" ]]; then
