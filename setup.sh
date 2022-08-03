@@ -25,10 +25,7 @@ entermail() {
 }
 
 setuppass() {
-	printf "Enter your gpg ID:\n"
-	read gpgid
-
-	pass init $gpgid
+	pass init $email
 	pass add $email
 }
 
@@ -109,6 +106,10 @@ arrangestuff() {
 	cp .mbsyncrc $HOME/
 }
 
+getpermission() {
+	chmod 700 $HOME/.config/gnupg/*
+}
+
 ## Main Function
 
 # Enter your email
@@ -128,6 +129,9 @@ isyncinstall || error "Could not set up the mbsyncrc file."
 
 # Move files to their respective locations
 arrangestuff || error "An error occurred in moving respective files."
+
+# Set proper permissions to GnuPG
+getpermission || error "Error setting up permissions for gnupg directory."
 
 # Closing message
 printf "============================================================================\n"
