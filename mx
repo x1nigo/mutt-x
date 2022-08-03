@@ -1,0 +1,22 @@
+#! /bin/sh
+
+option="$1"
+plshelp="
+Mutt-X — deploys x1nigo's configuration file(s) for neomutt as an email client.
+Usage:
+	mx [OPTION]
+Options:
+	-s --sync	Syncs mail and downloads them to your mail directory
+			for offline usage.
+	
+	-h --help	Displays this help text."
+
+if [[ $option == "-s" || $option == "--sync" ]]; then
+	mbsync -a 2>/dev/null
+elif [[ $option == "-h" || $option == "--help" ]]; then
+	echo $plshelp 2>/dev/null
+elif [[ $option == "" ]]; then
+	neomutt 2>/dev/null
+else
+	echo $plshelp 2>/dev/null
+fi
