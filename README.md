@@ -35,4 +35,4 @@ Make sure that there is a `$HOME/.config/gnupg/` directory. Otherwise, there's g
 gpg --full-gen-key
 ```
 ## References
-https://github.com/LukeSmithxyz/mutt-wizard
+- See https://github.com/LukeSmithxyz/mutt-wizard
