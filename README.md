@@ -1,8 +1,8 @@
 # mutt-x
-A script meant to set up an email client with neomutt. As of now, this only works with gmail &ndash; I haven't gotten
+A script meant to set up an email client with neomutt. As of now, this only works with Gmail &ndash; I haven't gotten
 around to making this more extensible yet.
 
-If you are prompted for your gmail password, don't put your actual one &ndash; you need to enable `two-factor
+If you are prompted for your Gmail password, don't put your actual one &ndash; you need to enable `two-factor
 authentication` and get an `app-password`. Use that one for the password prompt and it will be encrypted by the end of
 the script.
 
