@@ -154,6 +154,9 @@ SyncState *" > .mbsyncrc
 }
 
 arrangestuff() {
+	chmod +x mx &&
+	sudo cp mx /usr/bin/ &&
+
 	mkdir $muttdir &&
 	cp muttrc $muttdir &&
 	cp .mbsyncrc $HOME/
@@ -189,7 +192,7 @@ getpermission || error "Error setting up permissions for gnupg directory."
 # Closing message
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
 echo "Congratulations! You have successfully set up a terminal-based email client."
-echo "Make sure to run mx -s first before launching the client so you actually\n"
-echo "have some mail to browse through!\n"
+echo "Make sure to run mx -s first before launching the client so you actually"
+echo "have some mail to browse through!"
 echo "— x1nigo\n"
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
