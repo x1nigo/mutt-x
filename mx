@@ -12,7 +12,8 @@ Options:
         -s --sync       Syncs mail and downloads them to your mail directory
                         for offline usage.
 
-        -h --help       Displays this help text."
+        -h --help       Displays this help text.
+"
 }
 
 if [[ $option == "-s" || $option == "--sync" ]]; then
