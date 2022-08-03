@@ -5,7 +5,7 @@ maildir="$HOME/.mail/gmail"
 newmail=$(ls "$maildir"/Inbox/new | wc -l)
 plshelp() {
         echo "
-Mutt-X — deploys x1nigo's configuration file(s) for neomutt as an email client.
+mutt-x — deploys x1nigo's configuration file(s) for neomutt as an email client.
 Usage:
         mx [OPTION]
 Options:
