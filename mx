@@ -15,17 +15,17 @@ Options:
 "
 }
 
-if [[ $option == "-s" || $option == "--sync" ]]; then
+if [ "$option" = "-s" ] || [ "$option" = "--sync" ]; then
         mbsync -a 2>/dev/null &&
-        
+
         newmail=$(ls "$maildir"/Inbox/new | wc -l)
-        
-        if [[ $newmail -gt 0 ]]; then
+
+        if [ $newmail -gt 0 ]; then
                 notify-send -t 5000 "You have ($newmail) new mail!"
         fi
-elif [[ $option == "-h" || $option == "--help" ]]; then
+elif [ "$option" = "-h" ] || [ "$option" = "--help" ]; then
         plshelp 2>/dev/null
-elif [[ $option == "" ]]; then
+elif [ "$option" = "" ]; then
         neomutt 2>/dev/null
 else
         plshelp 2>/dev/null
