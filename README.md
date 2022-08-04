@@ -15,6 +15,13 @@ easier to switch accounts.
 - `a gpg keypair` &ndash; Encryption and signing tool. To get this, you need
 to run `gpg --full-gen-key` and go through the process.
 
+## Get started
+```
+git clone https://github.com/x1nigo/mutt-x
+cd mutt-x
+make install
+```
+
 ## Usage
 - `mx a <your@email.com>` &ndash; Add an email.
 - `mx d` &ndash; Delete an email.
