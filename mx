@@ -215,7 +215,7 @@ adduser() {
 	mkdir -p $maildir/$account/
 
 	mbsyncinstall || error "Failed to set up an mbsyncrc file for your email."
-	mailboxes=$(echo $(mblistcomplete))
+	mailboxes=$(echo $(mblistcomplete)) || error "Failed to get mailboxes."
 
 	muttinstall || error "There was an error setting up muttrc for your email."
 	echo "Successfully added user: $account!" || echo "Failed to add user: $account."
