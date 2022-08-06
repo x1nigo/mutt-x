@@ -1,6 +1,7 @@
 # Mutt-X
-A script meant to set up an email client with neomutt. So far, I've only seen this work with Gmail and Yahoo mail &ndash; although both require
-`app-passwords` for third-party applications to access them.
+A script meant to set up an email client with neomutt. When entering your password for your email 
+(after runing `mx a <your@email.com>`), make sure that you know whether or not such email requires
+an `app password` for third-party applications. Gmail, for example, requires this.
 
 Also, this script is strictly for offline use. `isync` will download your mail into your
 assigned mail directory and `neomutt` will access the data from there. Make sure to run `ms s`
@@ -24,9 +25,9 @@ make install
 
 ## Usage
 - `mx a <your@email.com>` &ndash; Add an email.
-- `mx d` &ndash; Delete an email.
+- `mx d` &ndash; Delete an account (and their mail).
 - `mx o` &ndash; Opens neomutt with specified account.
-- `mx s` &ndash; Sync mail and downloads them to your mail directory
+- `mx s` &ndash; Sync mail and downloads them to your mail directory.
 - `mx l` &ndash; Lists all accounts of mutt-x.
 - `mx h` &ndash; Displays this help text.
 - If you run `neomutt`, nothing will happen. I deliberately made this script run
