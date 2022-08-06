@@ -105,7 +105,7 @@ set sidebar_short_path = yes
 set sidebar_delim_chars = '/.'
 set mail_check_stats
 set editor = vim
-set index_format = "%4C %Z %{!%a, %d %b, %I:%M %P} %-20.20Fp %s %c"
+set index_format = \"%4C %Z %{!%a, %d %b, %I:%M %P} %-20.20Fp %s %c\"
 
 set sort = reverse-date-received
 
