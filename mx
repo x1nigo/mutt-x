@@ -38,7 +38,7 @@ syncuser() {
 	emailaccount=$(ls $HOME/.config/mutt/accounts | sed 's/.muttrc//' | dmenu -p "Select email account:" -l 5)
 	[ -z $emailaccount ] && error "No email input! Try again."
 
-	mbsync -c $HOME/.config/isync/accounts/$emailaccount.mbsyncrc $emailaccount 2>/dev/null &&
+	mbsync -c $HOME/.config/mbsync/accounts/$emailaccount.mbsyncrc $emailaccount 2>/dev/null &&
 
 	newmail=$(ls $maildir/$emailaccount/INBOX/new | wc -l)
 	if [[ $newmail -gt 0 ]]; then
@@ -51,7 +51,7 @@ deleteuser() {
 	[ -z $emailaccount ] && error "No email input! Try again."
 
 	sudo rm $HOME/.config/mutt/accounts/$emailaccount.muttrc
-	sudo rm $HOME/.config/isync/accounts/$emailaccount.mbsyncrc
+	sudo rm $HOME/.config/mbsync/accounts/$emailaccount.mbsyncrc
 	sudo rm -r $maildir/$emailaccount/
 }
 
@@ -79,7 +79,7 @@ Patterns * !\"[Gmail]/All Mail\" !Inbox
 Create Both
 Expunge Both
 SyncState *
-" > $HOME/.config/isync/accounts/$account.mbsyncrc
+" > $HOME/.config/mbsync/accounts/$account.mbsyncrc
 }
 
 muttinstall() {
@@ -193,7 +193,7 @@ adduser() {
 	fi
 
 	mblist() {
-		mbsync -c $HOME/.config/isync/accounts/$account.mbsyncrc -l $account
+		mbsync -c $HOME/.config/mbsync/accounts/$account.mbsyncrc -l $account
 	}
 
 	mblistcomplete() {
